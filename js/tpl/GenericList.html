@@ -1,0 +1,25 @@
+
+    <ul class="topcoat-list list" >
+    <%
+    
+    console.log('items.posts are ');
+    console.log(items.posts);
+    
+    var x=0;
+    _.each(items.posts, function(item) { 
+    %>
+    <li class="topcoat-list__item" data-id="<%= x %>">
+        <a href="#<%= context %>-item/<%= x %>">
+
+                <img src="img/crest_40.jpg" />
+                <p><%= item.title %></p>
+                <p><%= item.date %></p>
+                <span class="chevron"></span>
+
+            </a>
+        </li>
+    <%
+    x++;
+    }); %>
+    </ul>
+
